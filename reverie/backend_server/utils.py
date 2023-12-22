@@ -1,13 +1,13 @@
 # Copy and paste your OpenAI API Key
-openai_api_key = "" 
+openai_api_key = "" # keep this empty as we use LocalLLM
 # Put your name
-key_owner = ""
+key_owner = "" # keep this empty
 
 # huggingface key to load localLLM
 from huggingface_hub import login
 hf_hey = ""
 login(hf_hey)
-checkpoint = "bigscience/bloom-560m" # "meta-llama/Llama-2-70b-chat-hf"
+checkpoint = "meta-llama/Llama-2-7b-chat-hf" #"TheBloke/Llama-2-70B-Chat-fp16"  #"bigscience/bloom-560m"
 embedding_checkpoint = "jinaai/jina-embeddings-v2-base-en"
 
 # declare model here so function do not have to call this part everytime
